@@ -1,12 +1,15 @@
 import React from 'react';
 import Header from './components/header';
 import './app.scss';
+import Headline from './components/headline';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <h1>App</h1>
+      <section className="main">
+        <Headline header="Posts" desc="Click the button to render posts" />
+      </section>
     </div>
   );
 }
