@@ -14,7 +14,7 @@ function App({ posts, getPosts }) {
   };
 
   return (
-    <div className="App">
+    <div data-test="app-component" className="App">
       <Header />
       <section className="main">
         <Headline header="Posts" desc="Click the button to render posts" />
