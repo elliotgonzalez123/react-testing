@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow, configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import { findByTestAttr } from '../../../utils/index';
+import { findByTestAttr, checkProps } from '../../../utils/index';
 import Headline from './index';
 
 configure({ adapter: new Adapter() });
@@ -12,6 +12,17 @@ const setup = (props = {}) => {
 };
 
 describe('Headline Component', () => {
+  describe('Checking PropTypes', () => {
+    it('should not throw a warning', () => {
+      const expectedProps = {
+        header: 'test header',
+        desc: 'test desc'
+      };
+      const propsErr = checkProps(Headline, expectedProps);
+      expect(propsErr).toBeUndefined();
+    });
+  });
+
   describe('Have props', () => {
     let wrapper;
     beforeEach(() => {
