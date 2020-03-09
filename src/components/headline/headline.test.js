@@ -8,6 +8,7 @@ configure({ adapter: new Adapter() });
 
 const setup = (props = {}) => {
   const component = shallow(<Headline {...props} />);
+
   return component;
 };
 

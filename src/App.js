@@ -4,6 +4,7 @@ import './app.scss';
 import Headline from './components/headline';
 import SharedButton from './components/button/';
 import ListItem from './components/listitem';
+import Test from './components/test';
 import { connect } from 'react-redux';
 import { getPosts } from './actions/index';
 
@@ -13,10 +14,16 @@ function App({ posts, getPosts }) {
     emitEvent: getPosts
   };
 
+  const onTestClick = () => {
+    console.log('taakov');
+  };
+
   return (
     <div data-test="app-component" className="App">
       <Header />
+
       <section className="main">
+        <Test onTestClick={onTestClick} />
         <Headline header="Posts" desc="Click the button to render posts" />
         <SharedButton {...configButton} />
         {posts.length > 0 && (

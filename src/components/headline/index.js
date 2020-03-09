@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 class Headline extends Component {
   constructor(props) {
     super();
+    this.state = {
+      clicked: false
+    };
   }
   render() {
     const { header, desc } = this.props;

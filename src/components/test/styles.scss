@@ -1,0 +1,29 @@
+$primaryColor: blue;
+$secondaryColor: red;
+
+.test-btn {
+  color: $primaryColor;
+}
+
+.tested-btn {
+  color: $secondaryColor;
+}
+
+.form-div {
+  padding-top: 10px;
+
+  form {
+    display: block;
+    width: 25%;
+    textarea {
+      width: 97%;
+      outline: none;
+      border: 1px solid grey;
+      border-radius: 4px;
+    }
+    button {
+      margin-top: 5px;
+      float: right;
+    }
+  }
+}
